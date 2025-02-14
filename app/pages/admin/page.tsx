@@ -76,17 +76,16 @@ const ProductFormComponent = () => {
   const handleImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      // تحقق من حجم الصورة قبل الضغط
       if (file.size > 5 * 1024 * 1024) {
         toast.error("Image size is too large. Please upload an image less than 5MB.");
         return;
       }
 
       const options = {
-        maxSizeMB: 5, // زيادة الحد الأقصى لحجم الصورة
-        maxWidthOrHeight: 1920, // ضبط أقصى عرض أو ارتفاع للصورة
+        maxSizeMB: 5,  
+        maxWidthOrHeight: 1920,  
         useWebWorker: true,
-        fileType: "image/jpeg", // تحديد نوع الملف إذا لزم الأمر
+        fileType: "image/jpeg", 
       };
       try {
         const compressedFile = await imageCompression(file, options);
@@ -112,11 +111,12 @@ const ProductFormComponent = () => {
         );
         toast.success("Product updated successfully!");
       } else {
-        await axios.post(
+        const res = await axios.post(
           "https://backend-alpha-smoky-74.vercel.app/api/products",
           formData
         );
         toast.success("Product added successfully!");
+        setProducts([res.data, ...products]); // Add the new product at the beginning of the list
       }
       setFormData({
         name: "",
@@ -127,7 +127,6 @@ const ProductFormComponent = () => {
         category: "",
       });
       setEditId(null);
-      fetchProducts();
     } catch (error) {
       console.error("Error adding/updating product:", error);
       toast.error("An error occurred while adding/updating the product!");
@@ -151,7 +150,7 @@ const ProductFormComponent = () => {
         await axios.delete(
           `https://backend-alpha-smoky-74.vercel.app/api/products/${productToDelete}`
         );
-        fetchProducts();
+        setProducts(products.filter(product => product._id !== productToDelete));
         toast.success("Product deleted successfully!");
       } catch (error) {
         console.error("Error deleting product:", error);
@@ -270,6 +269,7 @@ const ProductFormComponent = () => {
                       alt={product.name}
                       layout="fill"
                       objectFit="cover"
+                      
                       onError={(e) => {
                         console.error("Image failed to load:", e);
                         toast.error("Failed to load image. Please try again.");

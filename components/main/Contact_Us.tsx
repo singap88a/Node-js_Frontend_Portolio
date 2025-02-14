@@ -40,7 +40,7 @@ export default function Contact() {
         <span className="mr-2 "> </span> Contact Us
       </span>
       <p className="  text-gray-400 max-w-2xl mb-8">
-        "As a passionate frontend developer, I'm always eager to connect with fellow professionals, potential clients, and anyone interested in my work..."
+        As a passionate frontend developer, Im always eager to connect with fellow professionals, potential clients, and anyone interested in my work...
       </p> 
 </div>
 

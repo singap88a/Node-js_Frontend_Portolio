@@ -34,7 +34,8 @@ const workExperience = [
 
 const Experience = () => {
   return (
-    <div className="container mx-auto  py-12    ">
+    <div className="pb-16 md:pb-1">
+          <div className="container mx-auto     ">
       <div className="pb-8 text-center relative z-[500] pt-10">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-3xl font-bold  ">
         My Work Experience
@@ -63,6 +64,8 @@ const Experience = () => {
         ))}
       </div>
     </div>
+    </div>
+
   );
 };
 
