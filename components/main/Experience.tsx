@@ -34,16 +34,16 @@ const workExperience = [
 
 const Experience = () => {
   return (
-    <div className="pb-24 md:pb-1 pt-24">
+    <div className="  md:pb-1  ">
           <div className="container mx-auto     ">
-      <div className="pb-8 text-center relative z-[500] pt-10">
+      <div className="pb-8 text-center relative z-[500] md:pt-0 pt-28">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-3xl font-bold  ">
         My Work Experience
       </span>
       </div>
 
 
-      <div className="grid md:grid-cols-2 gap-8 pb-28 md:pb-0">
+      <div className="grid md:grid-cols-2 gap-8 pb-40 md:pb-0">
         {workExperience.map((card) => (
           <div
             key={card.id}
