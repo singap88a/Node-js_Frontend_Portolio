@@ -23,8 +23,7 @@ const Skills = () => {
     >
       <SkillText />
 
-      {/* عرض المهارات بشكل عادي على الشاشات الكبيرة */}
-      <div className="hidden md:flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
+       {/* <div className="hidden md:flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Skill_data.map((image, index) => (
           <SkillDataProvider
             key={index}
@@ -34,7 +33,7 @@ const Skills = () => {
             index={index}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className="hidden md:flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
         {Frontend_skill.map((image, index) => (
@@ -82,7 +81,7 @@ const Skills = () => {
       </div>
 
       {/* عرض المهارات في شكل سلايدر على الشاشات الصغيرة */}
-      <div className="md:hidden w-full pb-20  md:pb-0">
+      <div className="md:hidden w-full pb-20 md:pb-0">
         <Swiper
           slidesPerView={3} // عدد العناصر المعروضة في كل شريحة
           spaceBetween={10} // المسافة بين العناصر
