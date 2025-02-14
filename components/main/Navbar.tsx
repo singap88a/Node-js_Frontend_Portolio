@@ -126,6 +126,8 @@ const Navbar = () => {
             <Link
               href="/pages/admin"
               className="  button-primary text-white font-bold py-2 px-6 rounded-lg text-center mx-auto"
+              onClick={() => setMenuOpen(false)}
+
             >
               Admin
             </Link>

@@ -40,7 +40,7 @@ const LoginComponent: React.FC<LoginComponentProps> = ({ onLoginSuccess }) => {
           Login
         </span>
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-between bg-[#1a172f5e] backdrop-blur-md p-8 shadow-lg rounded-md relative z-[500] border-[#8d60d4c5] border md:py-11">
+      <div className="flex flex-col md:flex-row items-center justify-between bg-[#1a172f5e] backdrop-blur-md p-8 shadow-lg rounded-md relative z-[500] border-[#8d60d4c5] border md:py-11 mb-20">
         <form onSubmit={handleLogin} className="space-y-4 md:w-1/2">
           <div className="pb-2">
             <label htmlFor="email" className="text-xl text-gray-400 mb-1">
