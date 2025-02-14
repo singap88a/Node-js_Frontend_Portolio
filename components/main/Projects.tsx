@@ -92,7 +92,7 @@ const ProductList: React.FC = () => {
     <div className="p-5 container" id="projects">
       <h2 className="text-center text-2xl font-bold mb-6 text-white z-[500] flex items-center justify-center gap-2 md:pt-0 pt-20">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 text-3xl font-bold">
-          🛍 All Products
+          🛍 All projects
         </span>
       </h2>
 
